@@ -8,7 +8,7 @@ A Hash Map is an abstract data type that maps keys to values, while a Hash Table
 
 Leaving formality aside, we can use either term to refer to a data structure that relates a key to a value. In order for that relationship to take place, we utilize hash functions.
 
-<p align="center"><img src="https://github.com/MateoMinghi/DS_Algorithms/blob/main/imgs/hash-table.png"></p>
+<p align="center"><img src="https://github.com/MateoMinghi/DS_Algorithms/blob/main/imgs/hash-table.png", width = 80%></p>
 
 LeetCode describes hash functions as *"the most important component of a hash table which is used to map the key to a specific bucket."* 
 > By a bucket, they essentially mean a slot in the array where the items are stored.
