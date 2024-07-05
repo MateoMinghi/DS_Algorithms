@@ -10,7 +10,7 @@ Linked Lists are linear data structures. Unlike arrays, linked lists use nodes t
 Nodes are the building blocks of Linked Lists. They hold two things: the value or whatever the fuck we want to store, and a reference to the next node.
 
 Such references are exactly what allow Linked Lists to be linear, every node has the address of its succeeding node. That is how each node can access its succeeding node. 
-> This means, of course, that the final node in a Linked List (also known as the tail), will ve pointing to Null, since there is no other element to point to. If the list is empty, that node will also point to Null.
+> This means, of course, that the final node in a Linked List (also known as the tail), will ve pointing to Null, since there is no other element to point to. 
 
 
 In order to build a linked list we need to
