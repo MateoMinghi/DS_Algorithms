@@ -175,8 +175,8 @@ int main() {
     list.push(1);
     list.push(2);
     list.push(3);
-    //list.append(4);
-    //list.append(5);
+    list.append(4);
+    list.append(5);
     list.printList();  // Output: 3 2 1 4 5
     return 0;
 }
