@@ -10,7 +10,7 @@ Linked Lists are linear data structures. Unlike arrays, linked lists use nodes t
 Nodes are the building blocks of Linked Lists. They hold two things: the value or whatever the fuck we want to store, and a reference to the next node.
 
 Such references are exactly what allow Linked Lists to be linear, every node has the address of its succeeding node. That is how each node can access its succeeding node. 
-> This means, of course, that the final node in a Linked List (also known as the tail), will ve pointing to Null, since there is no other element to point to. If the list is empty, that node will also point to Null.
+> This means, of course, that the final node in a Linked List (also known as the tail), will ve pointing to Null, since there is no other element to point to. 
 
 
 In order to build a linked list we need to
@@ -36,7 +36,7 @@ In C++, it is perfectly valid for a struct (or class) to contain a pointer to th
 >Node* next: next is a pointer to an instance of Node.
  
 
-In a linked list, the next pointer in a Node object is meant to point to another instance of Node, which may or may not exist at the time of the Node's creation. Initially, this pointer is typically set to nullptr to indicate that it doesn't point to any Node yet. When you link nodes together, you set the next pointer to point to the appropriate Node. Hence why the constructure sets the pointer initially to nullptr.
+In a linked list, the next pointer in a Node object is meant to point to another instance of Node, which may or may not exist at the time of the Node's creation. Initially, this pointer is typically set to nullptr to indicate that it doesn't point to any Node yet. When you link nodes together, you set the next pointer to point to the appropriate Node. Hence why the constructor sets the pointer initially to nullptr.
 
 Notice how in the above code we didn´t explicitly declare a constructor. When that happens, the C++ compiler will just use a default constructor, setting the pointer to the its default initialization, which is nullptr.
 
@@ -120,8 +120,9 @@ private:
 public:
     LinkedList() {
         head = nullptr;
-        //here we are saying that the head, assuming the list is empty, will point
-        //to nullptr. 
+        //here we are saying that the pointer, assuming the are no nodes, will point
+        //to nullptr. The address will be updated, to a more sensible name for this variable
+        //could be something like "first adress". 
     }
 
 
