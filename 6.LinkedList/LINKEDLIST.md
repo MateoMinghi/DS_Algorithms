@@ -36,7 +36,7 @@ In C++, it is perfectly valid for a struct (or class) to contain a pointer to th
 >Node* next: next is a pointer to an instance of Node.
  
 
-In a linked list, the next pointer in a Node object is meant to point to another instance of Node, which may or may not exist at the time of the Node's creation. Initially, this pointer is typically set to nullptr to indicate that it doesn't point to any Node yet. When you link nodes together, you set the next pointer to point to the appropriate Node. Hence why the constructure sets the pointer initially to nullptr.
+In a linked list, the next pointer in a Node object is meant to point to another instance of Node, which may or may not exist at the time of the Node's creation. Initially, this pointer is typically set to nullptr to indicate that it doesn't point to any Node yet. When you link nodes together, you set the next pointer to point to the appropriate Node. Hence why the constructor sets the pointer initially to nullptr.
 
 Notice how in the above code we didn´t explicitly declare a constructor. When that happens, the C++ compiler will just use a default constructor, setting the pointer to the its default initialization, which is nullptr.
 
