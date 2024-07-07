@@ -121,7 +121,7 @@ public:
     LinkedList() {
         head = nullptr;
         //here we are saying that the pointer, assuming the are no nodes, will point
-        //to nullptr. The address will be updated, to a more sensible name for this variable
+        //to nullptr. The address will be updated, so a more sensible name for this variable
         //could be something like "first adress". 
     }
 
