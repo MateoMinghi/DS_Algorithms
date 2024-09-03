@@ -17,12 +17,12 @@ For instance:
  /   / \
 D   E   F
 
-- We start at the root node 'A', mark it as visited, and explore its neigbors. 
-- We move to node 'B', mark it as visited, and explore its neighbors. 
-- We move to 'D', mark it as visited, and since it doesn't have any neighbors, we backtrack to 'B'.
-- Since we have already visited 'B' and all of its neighbors, we backtrack to 'A', and explore its other neighbor 'C'.
-- We move to 'C', mark it as visited, and explore its neighbors. 
-- We move to 'E', mark it as visited. Since 'E' doesn't have any neighbors, backtrack to 'C', and explore 'F'.
+- We start at the root node 'A', mark it as visited, and explore its children. 
+- We move to node 'B', mark it as visited, and explore its children. 
+- We move to 'D', mark it as visited, and since it doesn't have any children, we backtrack to 'B'.
+- Since we have already visited 'B' and all of its children, we backtrack to 'A', and explore its other neighbor 'C'.
+- We move to 'C', mark it as visited, and explore its children. 
+- We move to 'E', mark it as visited. Since 'E' doesn't have any children, backtrack to 'C', and explore 'F'.
 - Move to 'F', mark it as visited, and the traversal is complete.
 
 ```python
@@ -72,15 +72,15 @@ def dfs_iterative(start):
 
 
 
-# DFS for Binary Seach Trees
+# DFS for Binary Trees
 
-Although the idea behind the algorithm is the same (go as deep as possible before backtracking), in Binary Search Trees we can approach it in three ways:
+Although the idea behind the algorithm is the same (go as deep as possible before backtracking), in Binary  Trees we can approach it in three ways:
 
 * Preorder Traversal (Root -> Left -> Right)
 * Inorder Traversal (Left -> Root -> Right)
 * Postorder Traversal (Left -> Right -> Root)
 
-### Recursive DFS in Binary Search Trees
+### Recursive DFS in Binary Trees
 
 ### Preorder Traversal (Recursive)
 The root is processed first, followed by its left and right children.
