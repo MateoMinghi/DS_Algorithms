@@ -150,3 +150,63 @@ When to choose one over the other?
 *Inorder*: Use when you need to process nodes in sorted order (applicable to BSTs). Ideal for in-order data retrieval or checking BST properties.
 
 *Postorder*: Use when you need to process children before the root. Useful for deleting trees, postfix expressions, and dependency resolution.
+
+
+
+# Iterative Stack DFS
+
+Somehow this one made much more sense.
+```cpp
+struct TreeNode {
+    int val;
+    TreeNode* left;
+    TreeNode* right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+void dfs(TreeNode* root) {
+    if (root == nullptr) {
+        return;
+    }
+
+    stack<TreeNode*> s;  // Create a stack for DFS
+    s.push(root);        // Start with the root node
+
+    while (!s.empty()) {
+        TreeNode* node = s.top(); // Get the current node
+        s.pop();
+
+        // Process the current node (e.g., print its value)
+        cout << node->val << " ";
+
+        // Push the right child first so that the left child is processed first
+        //Since stacks follow LIFO order, adding the left after the right
+        //allows us to process it before
+        if (node->right) {
+            s.push(node->right);
+        }
+
+        // Push the left child to the stack
+        if (node->left) {
+            s.push(node->left);
+        }
+    }
+}
+
+int main() {
+    // Create a simple binary tree
+    TreeNode* root = new TreeNode(1);
+    root->left = new TreeNode(2);
+    root->right = new TreeNode(3);
+    root->left->left = new TreeNode(4);
+    root->left->right = new TreeNode(5);
+    root->right->left = new TreeNode(6);
+    root->right->right = new TreeNode(7);
+
+    // Perform DFS traversal
+    cout << "DFS Traversal: ";
+    dfs(root);
+
+    return 0;
+}
+```
